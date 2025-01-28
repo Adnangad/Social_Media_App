@@ -10,8 +10,7 @@ class MyViewsTestCase(TestCase):
         """Tests the signup view method"""
         client = Client()
         url = reverse("signup")
-        payload = {"name": "adnan", "email": "obuya@gmail.com",
-                   "password": "abumi", "location": "Nai",
+        payload = {"name": "adnan", "email": "obuya@gmail.com", "location": "Nai",
                    "dob": datetime.now().date()}
         response = client.post(
             url,
